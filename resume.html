@@ -1,47 +1,397 @@
 <!doctype html>
-
-<!-- this is a comment for human! -->
-
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sameed Ahmed Siddiqui - Portfolio & Resume</title>
+  <meta name="name" content="Sameed Ahmed Siddiqui's Portal">
+  <meta name="robot" content="noindex, nofollow">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent-bg: #eff6ff;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --transition: all 0.2s ease-in-out;
+    }
 
-  <header>
-    <title>Sameed Ahmed Siddiqui's Resume</title>
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="Favicon" href="faveicon.ico" type="image/x-icon">
-    <link rel="shortcut" href="favicon.ico" type"image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-score=1, shrink-to-fit=no">
-    <meta name="name" content="Sameed Ahmed Siddiqui's Portal">
-    <meta name="robot" content="noindex, nofollow">
-  </header>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <body>
-    <hr>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
 
-    <img src="images/headshot.jpg" alt="Sameed Ahmed Siddiqui's headshot" width="20%">
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
 
-    <h1>Sameed Ahmed Siddiqui</h1>
-    <h4>student in FAST university Islamabad, Studying BS-CS</h4>
+    /* Profile Header Styling */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 2px dashed var(--border);
+    }
 
-    <p>Email: <a href="mailto:i28223@nu.edu.pk" target="_blank">i228223@nu.edu.pk</a></p>
-    <!-- don't post physical address, personal phone number or other personal information on the web! -->
+    .headshot {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      box-shadow: var(--shadow);
+    }
 
-    <h2>Portfolio</h2>
-      <h3>GitHub: <a href="https://github.com/sameed-as" target="_blank">https://github.com/sameed-as</a></h3>
+    .header-text h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
 
-    <h2>Education</h2>
+    .header-text h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
 
-    <h3>FAST University, Islamabad</h3>
-    <h4>B.S. Computer Science, GPA not available yet</h4>
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
 
-    <h2>Professional Experiences</h2>
+    /* Global Links and Buttons */
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-    <p>Created game in Unity</p>
-    <p>creatd face recognition in Python</p>
-  </body>
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
 
-  <footer>
-  <hr>
-  <p><a href="index.html">Back to my portal</a><p>
-  </footer>
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--accent-bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
 
+    .btn-link:hover {
+      background: var(--primary);
+      color: white !important;
+      text-decoration: none;
+    }
+
+    /* Typography Sections */
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .subheading-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .timeline-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .institution-detail {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Bullet Layouts */
+    ul {
+      list-style-type: square;
+      margin-left: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Projects Dashboard Layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: #cbd5e1;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.5rem 0 0.85rem 0;
+    }
+
+    .tag {
+      background: #e2e8f0;
+      color: var(--text-main);
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Footer Navigation */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive Breakdown for Small Viewports */
+    @media (max-width: 768px) {
+      body { padding: 1rem 0.5rem; }
+      main { padding: 1.5rem; }
+      header { flex-direction: column; text-align: center; gap: 1rem; }
+      .subheading-group { flex-direction: column; justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <!-- Profile Header -->
+    <header>
+      <img src="images/headshot.jpg" alt="Sameed Ahmed Siddiqui" class="headshot">
+      <div class="header-text">
+        <h1>Sameed Ahmed Siddiqui</h1>
+        <h4>BS Computer Science Student at FAST NUCES Islamabad</h4>
+        <div class="contact-links">
+          <span>📧 <a href="mailto:sameed.siddique123@gmail.com">sameed.siddique123@gmail.com</a></span>
+          <span>•</span>
+          <span>🔗 <a href="https://linkedin.com/in/sameedasiddiqui" target="_blank">LinkedIn Profile</a></span>
+          <span>•</span>
+          <span>💻 <a href="https://github.com/sameed-as" target="_blank">GitHub Profile</a></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section id="summary">
+      <p style="color: var(--text-muted); font-size: 1rem;">
+        AI/ML developer passionate about building intelligent, human-centric software. I specialize in bridging the gap between complex machine learning algorithms—ranging from adversarial defenses to multi-agent generative pipelines—and intuitive user experiences. I enjoy transforming challenging technical concepts into scalable, end-to-end production systems that deliver measurable, real-world impact.
+      </p>
+    </section>
+
+    <!-- Academic Profiles -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="subheading-group">
+        <h3>FAST NUCES</h3>
+        <span class="timeline-date">Aug. 2022 — May 2026</span>
+      </div>
+      <div class="institution-detail">Bachelor of Science in Computer Science — Islamabad, Pakistan</div>
+      <ul>
+        <li><strong>Cumulative GPA:</strong> 3.41 / 4.00</li>
+        <li>Focus Areas: Adversarial Machine Learning, Generative AI Systems, Distributed Big Data Frameworks.</li>
+      </ul>
+    </section>
+
+    <!-- Professional Corporate Experience -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <div class="subheading-group">
+          <h3>Data Science Intern</h3>
+          <span class="timeline-date">July 2025 — Aug. 2025</span>
+        </div>
+        <div class="institution-detail">Asiacell Communication PJSC, CVM Department — Sulaymaniyah, Iraq</div>
+        <ul>
+          <li>Engineered automated model scoring and self-evaluating pipelines using Apache Airflow DAGs and MLflow to safely replicate production inference environments.</li>
+          <li>Conducted validation and automated latency checks on the "roberta_modelv1" LLM to improve structural integrity and accuracy of client automated response mechanisms.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="subheading-group">
+          <h3>Freelance Software Developer</h3>
+          <span class="timeline-date">July 2022 — Present</span>
+        </div>
+        <div class="institution-detail">Fiverr Marketplace — Remote</div>
+        <ul>
+          <li>Delivered highly integrated, functional cross-platform modules and custom script extensions satisfying rigorous architecture requirements for global clients.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Core Engineering Projects -->
+    <section id="projects">
+      <h2>Technical Portfolio</h2>
+      <div class="projects-grid">
+        
+        <!-- FakeLess -->
+        <div class="project-card">
+          <div class="subheading-group">
+            <h3>FakeLess (CloneShield) — Final Year Project</h3>
+            <a href="https://github.com/sameed-as/FakeLess" target="_blank" class="btn-link">📦 Repo</a>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">Flutter</span><span class="tag">XTTS v2</span><span class="tag">DSP</span>
+          </div>
+          <ul>
+            <li>Designed a deep 1D U-Net and FilterNet optimization layer to inject imperceptible acoustic protection audio noise patterns, systematically defending target voices against unauthorized XTTSv2 cloning hooks.</li>
+            <li>Deployed a highly integrated dual-API infrastructure utilizing Render cloud containers paired seamlessly with a local GPU-accelerated wrapper using secure ngrok routing channels.</li>
+          </ul>
+        </div>
+
+        <!-- Advanced GenAI -->
+        <div class="project-card">
+          <div class="subheading-group">
+            <h3>Advanced GenAI & Transformer Models</h3>
+            <a href="https://github.com/sameed-as/transformer-architectures" target="_blank" class="btn-link">📦 Repo</a>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">PyTorch</span><span class="tag">CycleGAN</span><span class="tag">Transformers</span><span class="tag">NLP</span><span class="tag">Flask</span>
+          </div>
+          <ul>
+            <li>Architected an unpaired translation CycleGAN pipeline using a custom 6-block ResNet Generator paired with localized PatchGAN discriminators to manage direct Face-to-Sketch visual manipulation layers.</li>
+            <li>Programmed a standalone low-resource English-to-Urdu Seq2Seq translation Transformer entirely from scratch using native PyTorch layers and joint subword BPE tokenization structures, achieving an organic 53.73 BLEU metric.</li>
+          </ul>
+        </div>
+
+        <!-- ContentAI -->
+        <div class="project-card">
+          <div class="subheading-group">
+            <h3>ContentAI Multi-Agent Pipeline</h3>
+            <a href="https://github.com/sameed-as/ContentAI" target="_blank" class="btn-link">📦 Repo</a>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">LangGraph</span><span class="tag">Llama 3.2</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span><span class="tag">Docker</span>
+          </div>
+          <ul>
+            <li>Migrated static text creation architectures into a specialized multi-agent cyclical state engine built atop LangGraph, dividing execution processes across autonomous understanding and drafting nodes.</li>
+            <li>Engineered a local production environment wrapping containerized local LLM models with a ChromaDB context vector index for rapid template formatting enforcement.</li>
+          </ul>
+        </div>
+
+        <!-- Live Crime Alert -->
+        <div class="project-card">
+          <div class="subheading-group">
+            <h3>Real-Time Crime Analytics Layer</h3>
+            <a href="https://github.com/sameed-as/crime-analytics-lambda" target="_blank" class="btn-link">📦 Repo</a>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Apache Kafka</span><span class="tag">Apache Storm</span><span class="tag">PySpark</span><span class="tag">Docker</span><span class="tag">PowerShell</span>
+          </div>
+          <ul>
+            <li>Constructed an enterprise-level Lambda Architecture running high-velocity real-time pipeline processing (100 logs/sec stream limits via Kafka and Storm topologies) running in parallel with PySpark batch arrays.</li>
+            <li>Successfully migrated the entire open-source network environment out of specialized Ubuntu configurations directly into native local Windows clusters via specialized multi-stage PowerShell system orchestrations.</li>
+          </ul>
+        </div>
+
+        <!-- Distributed Plant Disease -->
+        <div class="project-card">
+          <div class="subheading-group">
+            <h3>Distributed Plant Disease Classification</h3>
+            <a href="https://github.com/sameed-as/spark-plant-pipeline" target="_blank" class="btn-link">📦 Repo</a>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">PySpark MLlib</span><span class="tag">MongoDB</span><span class="tag">Streamlit</span><span class="tag">Parquet</span>
+          </div>
+          <ul>
+            <li>Engineered an optimized distributed analytics map pipeline processing a massive 15.8 GB imaging catalog containing structured crop classifications.</li>
+            <li>Eliminated systemic JVM-to-Python cluster overhead restrictions by rewriting raw data structures natively into Spark SQL arrays, compressing physical memory footings by a factor of 128x.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Navigation Link -->
+    <footer>
+      <p>🗂️ <a href="index.html">Back to my personal portal</a></p>
+    </footer>
+  </main>
+
+</body>
 </html>
